@@ -1,0 +1,9 @@
+namespace STUDENT06.Student06DB;
+
+context STUDENT06_TABLE_TEST {
+entity first_table {
+key ID: Integer NOT NULL;
+First_Name: String(25) NULL;
+Last_Name: String(25) NULL;
+}
+};

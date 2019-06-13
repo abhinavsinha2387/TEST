@@ -1,0 +1,37 @@
+ID: STUDENT06
+_schema-version: '2.0'
+version: 0.0.1
+
+modules:
+ - name: Student06DB
+   type: hdb
+   path: Student06DB
+   requires:
+    - name: hdi_Student06DB
+      properties:
+        TARGET_CONTAINER: ~{hdi-container-name}
+
+
+
+    - name: cross-container-service-1
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+        key: ServiceName_1
+        service: ~{the-service-name}
+                          
+
+
+resources:
+ - name: hdi_Student06DB
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+
+ - name: cross-container-service-1
+   parameters:
+      service-name: SDI Flowgraph Service to access table
+   properties:
+      the-service-name: ${service-name}
+   type: org.cloudfoundry.existing-service
+

@@ -1,0 +1,12 @@
+{
+	"role":{
+		"name": "STUDENT06.Student06DB.Roles::ReadAccess",
+		"object_privileges":[
+		{
+			"name":"STUDENT06.Student06DB::STUDENT06_TABLE_TEST.first_table",
+			"type":"TABLE",
+			"privileges":["SELECT"]
+		}
+							]
+			}
+}

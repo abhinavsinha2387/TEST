@@ -1,0 +1,8 @@
+{
+  "STUDENT06.Student06DB::Synonym_0": {
+    "target": {
+      "object": "AWARD",
+      "schema": "TRAINING"
+    }
+  }
+}
